@@ -4,6 +4,7 @@ from uuid import uuid4
 class Link(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
 	#name = models.CharField(max_length=200)
+	description = models.CharField(max_length=200, blank=True)
 	notes = models.TextField('Notes', blank=True)
 	url = models.URLField('URL', unique=True)
 	# Todos
